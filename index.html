@@ -3,109 +3,546 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI بوصلة - دليلك الشامل لأدوات الذكاء الاصطناعي</title>
-    <meta name="description" content="اكتشف قوة الذكاء الاصطناعي مع AI بوصلة. دليلك لأفضل الأدوات، الشروحات، والفلاتر الدقيقة لتسهيل رحلتك في عالم الـ AI.">
-    <link rel="stylesheet" href="style.css">
+    <title>AI بوصلة | دليل شامل لأدوات الذكاء الاصطناعي</title>
+    <!-- ربط Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ربط خط Cairo العربي -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+    <!-- ربط Font Awesome للأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="neon-background-grid"></div>
-
-    <header class="container">
-        <a href="#" class="logo">AI بوصلة</a>
-        <nav>
-            <a href="#">الرئيسية</a>
-            <a href="explore.html">استكشف الأدوات</a>
-            <a href="#">عن المنصة</a>
-            <a href="#">تواصل معنا</a>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero container">
-            <h1>مستقبلك يبدأ هنا. <br> اكتشف قوة الذكاء الاصطناعي.</h1>
-            <p>دليلك الشامل لأفضل أدوات AI. ابحث، قارن، وابدأ الابتكار لتعزيز إبداعك وإنتاجيتك.</p>
-            <a href="explore.html" class="cta-button">استكشف الأدوات الآن 🚀</a>
-        </section>
-
-        <section class="features container">
-            <h2 class="section-title">لماذا AI بوصلة؟</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-filter"></i></div>
-                    <h3>فلترة دقيقة</h3>
-                    <p>اعثر على الأداة المناسبة لاحتياجاتك بسرعة وكفاءة.</p>
+<body class="bg-[#0a0a0f] text-gray-200">
+    
+    <!-- شريط التنقل -->
+    <nav class="sticky top-0 z-50 bg-[#0a0a0f]/90 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- الشعار -->
+                <div class="flex items-center space-x-2 space-x-reverse">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 flex items-center justify-center glow-purple">
+                        <i class="fas fa-compass text-white text-xl"></i>
+                    </div>
+                    <a href="#" class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent neon-text-purple">
+                        AI بوصلة
+                    </a>
                 </div>
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-book-open"></i></div>
-                    <h3>شروحات عربية</h3>
-                    <p>نقدم شروحات مفصلة باللغة العربية لسهولة الاستخدام.</p>
+                
+                <!-- قائمة التنقل الرئيسية (للشاشات الكبيرة) -->
+                <div class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#" class="hover:text-purple-400 transition-colors duration-300 font-medium">الرئيسية</a>
+                    <a href="#categories" class="hover:text-blue-400 transition-colors duration-300 font-medium">الأقسام</a>
+                    <a href="#features" class="hover:text-green-400 transition-colors duration-300 font-medium">المميزات</a>
+                    <a href="#" class="hover:text-purple-400 transition-colors duration-300 font-medium">المدونة</a>
+                    <a href="#" class="hover:text-blue-400 transition-colors duration-300 font-medium">اتصل بنا</a>
                 </div>
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-sync-alt"></i></div>
-                    <h3>تحديث مستمر</h3>
-                    <p>متابعة أحدث أدوات الذكاء الاصطناعي وإضافتها يومياً.</p>
+                
+                <!-- زر تسجيل الدخول -->
+                <div class="hidden md:block">
+                    <button class="px-6 py-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium glow-purple hover:from-purple-700 hover:to-blue-600 transition-all duration-300">
+                        تسجيل الدخول
+                    </button>
                 </div>
-                <div class="feature-card">
-                    <div class="icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h3>تجربة سلسة</h3>
-                    <p>تصميم متجاوب ومريح على جميع الأجهزة، وخاصة الهواتف.</p>
+                
+                <!-- زر القائمة المنسدلة للهواتف -->
+                <button id="menu-toggle" class="md:hidden text-2xl text-gray-300 hover:text-purple-400 transition-colors">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- قائمة التنقل للهواتف -->
+            <div id="mobile-menu" class="mobile-menu mt-4 md:hidden">
+                <div class="flex flex-col space-y-4 pb-4">
+                    <a href="#" class="hover:text-purple-400 transition-colors duration-300 font-medium py-2 border-b border-gray-800">الرئيسية</a>
+                    <a href="#categories" class="hover:text-blue-400 transition-colors duration-300 font-medium py-2 border-b border-gray-800">الأقسام</a>
+                    <a href="#features" class="hover:text-green-400 transition-colors duration-300 font-medium py-2 border-b border-gray-800">المميزات</a>
+                    <a href="#" class="hover:text-purple-400 transition-colors duration-300 font-medium py-2 border-b border-gray-800">المدونة</a>
+                    <a href="#" class="hover:text-blue-400 transition-colors duration-300 font-medium py-2 border-b border-gray-800">اتصل بنا</a>
+                    <button class="px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium glow-purple hover:from-purple-700 hover:to-blue-600 transition-all duration-300 w-full">
+                        تسجيل الدخول
+                    </button>
                 </div>
             </div>
-        </section>
-
-        <section class="categories container">
-            <h2 class="section-title">أقسامنا المميزة</h2>
-            <div class="categories-grid">
-                <a href="explore.html?category=image-generation" class="category-card">
-                    <div class="icon"><i class="fas fa-paint-brush"></i></div>
-                    <h3>توليد الصور</h3>
-                    <p>أدوات لتحويل أفكارك إلى فنون بصرية.</p>
-                </a>
-                <a href="explore.html?category=content-writing" class="category-card">
-                    <div class="icon"><i class="fas fa-feather-alt"></i></div>
-                    <h3>كتابة المحتوى</h3>
-                    <p>ساعدك في صياغة مقالات، نصوص، وأفكار إبداعية.</p>
-                </a>
-                <a href="explore.html?category=programming" class="category-card">
-                    <div class="icon"><i class="fas fa-code"></i></div>
-                    <h3>البرمجة</h3>
-                    <p>أدوات لتوليد الكود، إصلاح الأخطاء، وتحليل البيانات.</p>
-                </a>
-                <a href="explore.html?category=video-editing" class="category-card">
-                    <div class="icon"><i class="fas fa-video"></i></div>
-                    <h3>تحرير الفيديو</h3>
-                    <p>إنشاء وتعديل الفيديوهات باحترافية وسهولة.</p>
-                </a>
-                <a href="explore.html?category=audio-production" class="category-card">
-                    <div class="icon"><i class="fas fa-microphone-alt"></i></div>
-                    <h3>إنتاج الصوت</h3>
-                    <p>تحويل النصوص إلى صوت، وتعديل المقاطع الصوتية.</p>
-                </a>
-                <a href="explore.html?category=productivity" class="category-card">
-                    <div class="icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>الإنتاجية</h3>
-                    <p>أدوات لتحسين عملك اليومي وإدارة مشاريعك.</p>
-                </a>
+        </div>
+    </nav>
+    
+    <!-- القسم الرئيسي (Hero Section) -->
+    <section class="pt-16 pb-24 md:pt-24 md:pb-32 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 fade-in">
+                    <!-- العنوان الرئيسي -->
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        <span class="block">اكتشف قوة</span>
+                        <span class="bg-gradient-to-r from-purple-400 via-blue-400 to-green-400 bg-clip-text text-transparent neon-text-purple">الذكاء الاصطناعي</span>
+                        <span class="block">بين يديك</span>
+                    </h1>
+                    
+                    <!-- الوصف -->
+                    <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
+                        <span class="text-purple-400 font-bold">AI بوصلة</span> هو الدليل العربي الشامل الذي يرشدك إلى أفضل أدوات الذكاء الاصطناعي في جميع المجالات. من التصميم إلى البرمجة، ومن تحرير الفيديو إلى الكتابة الإبداعية، نحن نوجهك إلى المستقبل.
+                    </p>
+                    
+                    <!-- زر CTA -->
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 sm:space-x-reverse">
+                        <button class="px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-bold text-lg glow-purple hover:from-purple-700 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                            ابدأ الرحلة الآن
+                            <i class="fas fa-arrow-left mr-2 ml-2"></i>
+                        </button>
+                        <button class="px-8 py-4 rounded-full border-2 border-purple-500 text-purple-400 font-bold text-lg hover:bg-purple-500/10 transition-all duration-300 flex items-center justify-center">
+                            شاهد الفيديو التوضيحي
+                            <i class="fas fa-play-circle mr-2 ml-2"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- إحصائيات -->
+                    <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <div class="text-center p-4 rounded-xl bg-gray-900/50 border border-gray-800 glow-blue">
+                            <div class="text-3xl font-bold text-blue-400 mb-2">+500</div>
+                            <div class="text-gray-300">أداة ذكاء اصطناعي</div>
+                        </div>
+                        <div class="text-center p-4 rounded-xl bg-gray-900/50 border border-gray-800 glow-purple">
+                            <div class="text-3xl font-bold text-purple-400 mb-2">+120</div>
+                            <div class="text-gray-300">دليل عربي مفصل</div>
+                        </div>
+                        <div class="text-center p-4 rounded-xl bg-gray-900/50 border border-gray-800 glow-green">
+                            <div class="text-3xl font-bold text-green-400 mb-2">+50,000</div>
+                            <div class="text-gray-300">مستخدم شهرياً</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- الصورة التوضيحية -->
+                <div class="lg:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-lg">
+                        <div class="absolute -top-6 -right-6 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl"></div>
+                        <div class="absolute -bottom-6 -left-6 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl"></div>
+                        
+                        <div class="relative bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 rounded-3xl p-6 glow-purple transform hover:scale-[1.02] transition-transform duration-500">
+                            <div class="flex space-x-4 space-x-reverse mb-6">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-gray-800/50 rounded-xl p-4 border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                                    <div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center mb-3">
+                                        <i class="fas fa-paint-brush text-purple-400"></i>
+                                    </div>
+                                    <h3 class="font-bold text-white mb-2">تصميم</h3>
+                                    <p class="text-sm text-gray-400">أدوات تصميم بالذكاء الاصطناعي</p>
+                                </div>
+                                
+                                <div class="bg-gray-800/50 rounded-xl p-4 border border-gray-700 hover:border-blue-500 transition-all duration-300">
+                                    <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center mb-3">
+                                        <i class="fas fa-code text-blue-400"></i>
+                                    </div>
+                                    <h3 class="font-bold text-white mb-2">برمجة</h3>
+                                    <p class="text-sm text-gray-400">مساعدين برمجيين أذكياء</p>
+                                </div>
+                                
+                                <div class="bg-gray-800/50 rounded-xl p-4 border border-gray-700 hover:border-green-500 transition-all duration-300">
+                                    <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center mb-3">
+                                        <i class="fas fa-video text-green-400"></i>
+                                    </div>
+                                    <h3 class="font-bold text-white mb-2">فيديو</h3>
+                                    <p class="text-sm text-gray-400">تحرير فيديو ذكي</p>
+                                </div>
+                                
+                                <div class="bg-gray-800/50 rounded-xl p-4 border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                                    <div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center mb-3">
+                                        <i class="fas fa-pen-nib text-purple-400"></i>
+                                    </div>
+                                    <h3 class="font-bold text-white mb-2">كتابة</h3>
+                                    <p class="text-sm text-gray-400">مساعدين كتابة إبداعية</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 bg-gray-800/70 rounded-xl p-4 border border-gray-700">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center mr-3">
+                                        <i class="fas fa-robot text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-white">نوصي لك:</h4>
+                                        <p class="text-sm text-gray-300">أداة Midjourney لإنشاء صور ذكية</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
-    </main>
-
-    <footer class="container">
-        <p>&copy; 2024 AI بوصلة. جميع الحقوق محفوظة.</p>
-        <div class="social-links">
-            <a href="#" target="_blank" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" target="_blank" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
-            <a href="#" target="_blank" aria-label="لينكدإن"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" target="_blank" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+        </div>
+    </section>
+    
+    <!-- قسم الأقسام (Categories Section) -->
+    <section id="categories" class="py-16 px-4 bg-gradient-to-b from-[#0a0a0f] to-[#11111f]">
+        <div class="container mx-auto">
+            <div class="text-center mb-16 scroll-animation">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">اكتشف أدوات الذكاء الاصطناعي حسب المجال</h2>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto">
+                    قمنا بتصنيف أفضل أدوات الذكاء الاصطناعي في مجالات متنوعة لتسريع عملك وإبداعك
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- بطاقة 1 -->
+                <div class="scroll-animation bg-gray-900/50 border border-gray-800 rounded-2xl p-6 hover:border-purple-500 transition-all duration-300 glow-purple hover:glow-purple transform hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center mb-6">
+                        <i class="fas fa-palette text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">التصميم والفن</h3>
+                    <p class="text-gray-400 mb-6">
+                        أدوات رائدة في إنشاء الصور والتصاميم الفنية باستخدام الذكاء الاصطناعي. أنشئ لوحات فنية، شعارات، ورسومات احترافية في دقائق.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-purple-400 font-medium">+80 أداة</span>
+                        <a href="#" class="text-gray-300 hover:text-purple-400 transition-colors">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- بطاقة 2 -->
+                <div class="scroll-animation bg-gray-900/50 border border-gray-800 rounded-2xl p-6 hover:border-blue-500 transition-all duration-300 glow-blue hover:glow-blue transform hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">البرمجة والتطوير</h3>
+                    <p class="text-gray-400 mb-6">
+                        مساعدين برمجيين أذكياء يساعدونك في كتابة الكود، تصحيح الأخطاء، وتوليد حلول برمجية مبتكرة. وفر الوقت وأنجز المزيد.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-blue-400 font-medium">+65 أداة</span>
+                        <a href="#" class="text-gray-300 hover:text-blue-400 transition-colors">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- بطاقة 3 -->
+                <div class="scroll-animation bg-gray-900/50 border border-gray-800 rounded-2xl p-6 hover:border-green-500 transition-all duration-300 glow-green hover:glow-green transform hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center mb-6">
+                        <i class="fas fa-video text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">الفيديو والصوت</h3>
+                    <p class="text-gray-400 mb-6">
+                        أدوات متطورة لتحرير الفيديو، توليد الصوت، وتعديل الوسائط باستخدام الذكاء الاصطناعي. أنتج محتوى مذهل بجودة احترافية.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-400 font-medium">+45 أداة</span>
+                        <a href="#" class="text-gray-300 hover:text-green-400 transition-colors">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- بطاقة 4 -->
+                <div class="scroll-animation bg-gray-900/50 border border-gray-800 rounded-2xl p-6 hover:border-purple-500 transition-all duration-300 glow-purple hover:glow-purple transform hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center mb-6">
+                        <i class="fas fa-pen-fancy text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">الكتابة والمحتوى</h3>
+                    <p class="text-gray-400 mb-6">
+                        مساعدين كتابة أذكياء يساعدونك في إنشاء محتوى متميز، مقالات، نصوص إعلانية، وترجمة ذكية بجودة عالية.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-purple-400 font-medium">+70 أداة</span>
+                        <a href="#" class="text-gray-300 hover:text-purple-400 transition-colors">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- بطاقة 5 -->
+                <div class="scroll-animation bg-gray-900/50 border border-gray-800 rounded-2xl p-6 hover:border-blue-500 transition-all duration-300 glow-blue hover:glow-blue transform hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">التسويق والأعمال</h3>
+                    <p class="text-gray-400 mb-6">
+                        أدوات ذكية لتحليل البيانات، تحسين التسويق، وأتمتة العمليات التجارية. طور أعمالك باستخدام تقنيات المستقبل.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-blue-400 font-medium">+55 أداة</span>
+                        <a href="#" class="text-gray-300 hover:text-blue-400 transition-colors">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- بطاقة 6 -->
+                <div class="scroll-animation bg-gray-900/50 border border-gray-800 rounded-2xl p-6 hover:border-green-500 transition-all duration-300 glow-green hover:glow-green transform hover:-translate-y-2">
+                    <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">التعليم والبحث</h3>
+                    <p class="text-gray-400 mb-6">
+                        منصات تعليمية ذكية، مساعدين بحثيين، وأدوات لتحليل النصوص العلمية. طور معرفتك باستخدام أحدث التقنيات.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-400 font-medium">+40 أداة</span>
+                        <a href="#" class="text-gray-300 hover:text-green-400 transition-colors">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- زر عرض المزيد -->
+            <div class="text-center mt-12 scroll-animation">
+                <button class="px-8 py-3 rounded-full border-2 border-purple-500 text-purple-400 font-bold hover:bg-purple-500/10 transition-all duration-300 flex items-center justify-center mx-auto">
+                    عرض جميع الأقسام
+                    <i class="fas fa-arrow-left mr-2 ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- قسم المميزات (Features Section) -->
+    <section id="features" class="py-20 px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-16 scroll-animation">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">لماذا تختار AI بوصلة؟</h2>
+                <p class="text-lg text-gray-400 max-w-3xl mx-auto">
+                    نقدم لك تجربة فريدة لا مثيل لها في عالم أدوات الذكاء الاصطناعي
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- المميزات النصية -->
+                <div>
+                    <!-- ميزة 1 -->
+                    <div class="mb-10 scroll-animation">
+                        <div class="flex items-start mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center mr-4 glow-purple">
+                                <i class="fas fa-bolt text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">سرعة فائقة وتحديث مستمر</h3>
+                                <p class="text-gray-400">
+                                    نحن نواكب أحدث التطورات في عالم الذكاء الاصطناعي. نقوم بتحديث أدلتنا أسبوعياً لإضافة أحدث الأدوات والتقنيات قبل الجميع.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ميزة 2 -->
+                    <div class="mb-10 scroll-animation">
+                        <div class="flex items-start mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-green-500 flex items-center justify-center mr-4 glow-blue">
+                                <i class="fas fa-globe-asia text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">شمولية عربية بلمسة عالمية</h3>
+                                <p class="text-gray-400">
+                                    نقدم شروحات مفصلة باللغة العربية مع ترجمة دقيقة للمصطلحات التقنية. كل أداة مرفقة بمراجعة شاملة وطريقة استخدام مفصلة.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ميزة 3 -->
+                    <div class="scroll-animation">
+                        <div class="flex items-start mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-purple-500 flex items-center justify-center mr-4 glow-green">
+                                <i class="fas fa-users text-white"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">مجتمع تفاعلي داعم</h3>
+                                <p class="text-gray-400">
+                                    انضم إلى مجتمعنا النشط من المحترفين والمبتدئين. تبادل الخبرات، احصل على إجابات لاستفساراتك، وكن جزءاً من ثورة الذكاء الاصطناعي.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- صورة المميزات -->
+                <div class="relative scroll-animation">
+                    <div class="absolute -top-6 -right-6 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-6 -left-6 w-64 h-64 bg-green-500/10 rounded-full blur-3xl"></div>
+                    
+                    <div class="relative bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 rounded-3xl p-6 glow-blue">
+                        <div class="grid grid-cols-1 gap-6">
+                            <div class="bg-gray-800/50 rounded-xl p-5 border border-gray-700">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center mr-3">
+                                            <i class="fas fa-star text-purple-400"></i>
+                                        </div>
+                                        <h4 class="font-bold text-white">أدوات موصى بها</h4>
+                                    </div>
+                                    <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">جديد</span>
+                                </div>
+                                <p class="text-gray-300 text-sm">
+                                    نقدم لك توصيات مخصصة بناءً على اهتماماتك واحتياجاتك. نوفر لك الوقت والجهد في البحث.
+                                </p>
+                            </div>
+                            
+                            <div class="bg-gray-800/50 rounded-xl p-5 border border-gray-700">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center mr-3">
+                                            <i class="fas fa-filter text-blue-400"></i>
+                                        </div>
+                                        <h4 class="font-bold text-white">فلاتر بحث متقدمة</h4>
+                                    </div>
+                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">مميز</span>
+                                </div>
+                                <p class="text-gray-300 text-sm">
+                                    بحث ذكي يمكنك من فلترة الأدوات حسب السعر، الصعوبة، التقييم، والمزيد. وجد ما تبحث عنه بسرعة.
+                                </p>
+                            </div>
+                            
+                            <div class="bg-gray-800/50 rounded-xl p-5 border border-gray-700">
+                                <div class="flex items-center justify-between mb-3">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center mr-3">
+                                            <i class="fas fa-play-circle text-green-400"></i>
+                                        </div>
+                                        <h4 class="font-bold text-white">دروس تعليمية</h4>
+                                    </div>
+                                    <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">شائع</span>
+                                </div>
+                                <p class="text-gray-300 text-sm">
+                                    دروس فيديو وشروحات مكتوبة تعلمك كيفية استخدام كل أداة بفعالية. احترف الذكاء الاصطناعي بسهولة.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 p-5 rounded-xl bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/30">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center mr-4">
+                                    <i class="fas fa-crown text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">انضم إلى النسخة المميزة</h4>
+                                    <p class="text-gray-300 text-sm">احصل على مميزات حصرية وتوصيات مخصصة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- قسم CTA -->
+    <section class="py-16 px-4 bg-gradient-to-r from-gray-900 to-gray-950">
+        <div class="container mx-auto">
+            <div class="bg-gradient-to-br from-gray-900 to-gray-950 border border-gray-800 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden scroll-animation">
+                <!-- تأثيرات الخلفية -->
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+                
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">جاهز لبدء رحلتك مع الذكاء الاصطناعي؟</h2>
+                    <p class="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+                        انضم إلى آلاف المحترفين والمبدعين الذين يعتمدون على AI بوصلة لاكتشاف أفضل أدوات الذكاء الاصطناعي ومواكبة أحدث التطورات التقنية.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 sm:space-x-reverse">
+                        <button class="px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-bold text-lg glow-purple hover:from-purple-700 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                            اشترك مجاناً الآن
+                            <i class="fas fa-user-plus mr-2 ml-2"></i>
+                        </button>
+                        <button class="px-8 py-4 rounded-full border-2 border-gray-700 text-gray-300 font-bold text-lg hover:border-purple-500 hover:text-purple-400 transition-all duration-300 flex items-center justify-center">
+                            تعرف على الخطط المميزة
+                            <i class="fas fa-crown mr-2 ml-2"></i>
+                        </button>
+                    </div>
+                    
+                    <p class="text-gray-500 text-sm mt-6">
+                        انضم مجاناً وابدأ باستكشاف عالم الذكاء الاصطناعي بدون أي تكلفة
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- تذييل الصفحة (Footer) -->
+    <footer class="bg-[#11111f] border-t border-gray-800 py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- معلومات الموقع -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 space-x-reverse mb-6">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 flex items-center justify-center">
+                            <i class="fas fa-compass text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                            AI بوصلة
+                        </h3>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        الدليل العربي الشامل لأدوات الذكاء الاصطناعي. نرشدك إلى أفضل الأدوات والتقنيات في مجال الذكاء الاصطناعي لتسريع إنتاجيتك وإبداعك.
+                    </p>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-500 transition-colors duration-300">
+                            <i class="fab fa-twitter text-gray-300 hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-500 transition-colors duration-300">
+                            <i class="fab fa-facebook-f text-gray-300 hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-500 transition-colors duration-300">
+                            <i class="fab fa-instagram text-gray-300 hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 transition-colors duration-300">
+                            <i class="fab fa-linkedin-in text-gray-300 hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-red-500 transition-colors duration-300">
+                            <i class="fab fa-youtube text-gray-300 hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- روابط سريعة -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-white">روابط سريعة</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors duration-300">الرئيسية</a></li>
+                        <li><a href="#categories" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">الأقسام</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-green-400 transition-colors duration-300">المميزات</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors duration-300">المدونة</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition-colors duration-300">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <!-- الاشتراك في النشرة -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 text-white">ابق على اطلاع</h4>
+                    <p class="text-gray-400 mb-4">
+                        اشترك في نشرتنا البريدية لتصل إليك آخر التحديثات والأدوات الجديدة.
+                    </p>
+                    <div class="flex">
+                        <input type="email" placeholder="بريدك الإلكتروني" class="bg-gray-800 text-white px-4 py-3 rounded-r-lg w-full focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        <button class="bg-gradient-to-r from-purple-600 to-blue-500 text-white px-4 py-3 rounded-l-lg hover:from-purple-700 hover:to-blue-600 transition-all duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- حقوق النشر -->
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-500">
+                    © 2024 AI بوصلة. جميع الحقوق محفوظة. 
+                    <span class="text-gray-600 mx-2">|</span>
+                    صمم بتقنيات المستقبل لتجربة أسطورية
+                </p>
+                <p class="text-gray-600 text-sm mt-2">
+                    هذا المشروع تصميم تجريبي لتقنيات الويب الحديثة لعام 2024 وما بعده
+                </p>
+            </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
+    
+    <!-- JavaScript -->
+<script src="script.js"></script>
 </body>
 </html>
