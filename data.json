@@ -1,0 +1,114 @@
+{
+  "tools": [
+    {
+      "id": 1,
+      "name": "Midjourney",
+      "description": "أداة متطورة لإنشاء الصور الفنية باستخدام الذكاء الاصطناعي من خلال الأوامر النصية",
+      "main_category": "التصميم والفنون",
+      "sub_category": "توليد الصور",
+      "type": "paid",
+      "tags": ["صور", "فن", "تصميم", "توليد"],
+      "link": "https://midjourney.com",
+      "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 2,
+      "name": "ChatGPT",
+      "description": "مساعد ذكي للمحادثة والكتابة والإجابة على الأسئلة بمختلف المجالات",
+      "main_category": "صناعة المحتوى",
+      "sub_category": "الكتابة",
+      "type": "free",
+      "tags": ["محادثة", "كتابة", "مساعدة", "إجابات"],
+      "link": "https://chat.openai.com",
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 3,
+      "name": "GitHub Copilot",
+      "description": "مساعد برمجي ذكي يساعد في كتابة الكود واقتراح الحلول البرمجية",
+      "main_category": "البرمجة والتطوير",
+      "sub_category": "مساعدة البرمجة",
+      "type": "paid",
+      "tags": ["برمجة", "كود", "تطوير", "مساعد"],
+      "link": "https://github.com/features/copilot",
+      "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w-400&h=300&fit=crop"
+    },
+    {
+      "id": 4,
+      "name": "Runway ML",
+      "description": "منصة متكاملة لتحرير الفيديو وإنشاء المؤثرات البصرية باستخدام الذكاء الاصطناعي",
+      "main_category": "الفيديو والأنيميشن",
+      "sub_category": "تحرير الفيديو",
+      "type": "freemium",
+      "tags": ["فيديو", "تحرير", "مؤثرات", "أنيميشن"],
+      "link": "https://runwayml.com",
+      "image": "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 5,
+      "name": "Canva AI",
+      "description": "أدوات ذكية مدمجة في منصة كانفا لتصميم الصور والعروض التقديمية",
+      "main_category": "التصميم والفنون",
+      "sub_category": "تصميم الجرافيك",
+      "type": "freemium",
+      "tags": ["تصميم", "جرافيك", "عروض", "صور"],
+      "link": "https://canva.com",
+      "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 6,
+      "name": "Descript",
+      "description": "تحرير الفيديو باستخدام النصوص وإنشاء صوت رقمي واقعي من النصوص",
+      "main_category": "الفيديو والأنيميشن",
+      "sub_category": "تحويل النص لفيديو",
+      "type": "paid",
+      "tags": ["فيديو", "صوت", "تحرير", "نص"],
+      "link": "https://descript.com",
+      "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 7,
+      "name": "Grammarly",
+      "description": "مدقق لغوي ذكي لتحسين الكتابة وتصحيح الأخطاء الإملائية والنحوية",
+      "main_category": "صناعة المحتوى",
+      "sub_category": "التحرير اللغوي",
+      "type": "freemium",
+      "tags": ["كتابة", "تدقيق", "لغوي", "نصوص"],
+      "link": "https://grammarly.com",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 8,
+      "name": "Notion AI",
+      "description": "مساعد ذكي داخل نوشن لتنظيم الأفكار وكتابة المحتوى وتلخيص النصوص",
+      "main_category": "الإنتاجية وإدارة الأعمال",
+      "sub_category": "تنظيم المهام",
+      "type": "paid",
+      "tags": ["إنتاجية", "تنظيم", "كتابة", "ملاحظات"],
+      "link": "https://notion.so",
+      "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 9,
+      "name": "ElevenLabs",
+      "description": "توليد صوت بشري واقعي من النصوص بمختلف اللغات والأصوات",
+      "main_category": "الصوت والموسيقى",
+      "sub_category": "توليد الصوت",
+      "type": "freemium",
+      "tags": ["صوت", "توليد", "نص", "لغات"],
+      "link": "https://elevenlabs.io",
+      "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 10,
+      "name": "DALL-E 2",
+      "description": "إنشاء صور واقعية وفنية من الأوصاف النصية باستخدام الذكاء الاصطناعي",
+      "main_category": "التصميم والفنون",
+      "sub_category": "توليد الصور",
+      "type": "paid",
+      "tags": ["صور", "فن", "توليد", "تصميم"],
+      "link": "https://openai.com/dall-e-2",
+      "image": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=400&h=300&fit=crop"
+    }
+  ]
+}

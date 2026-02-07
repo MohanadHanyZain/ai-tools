@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موارد الذكاء الاصطناعي - الصفحة الرئيسية</title>
+    <title>الأقسام الفرعية - موارد الذكاء الاصطناعي</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
             
             <nav>
                 <ul id="main-menu">
-                    <li><a href="index.html" class="active">الرئيسية</a></li>
+                    <li><a href="index.html">الرئيسية</a></li>
                     <li><a href="category.html">الأقسام</a></li>
                     <li><a href="about.html">من نحن</a></li>
                     <li><a href="contact.html">اتصل بنا</a></li>
@@ -38,28 +38,21 @@
         </div>
     </header>
 
-    <!-- قسم الهيرو -->
-    <section class="hero">
+    <!-- صفحة الأقسام الفرعية -->
+    <section class="subcategory-page">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">مرحباً بكم في <span>عالم الذكاء الاصطناعي</span></h1>
-                <p class="hero-description">
-                    منصة شاملة تجمع أفضل أدوات وتقنيات الذكاء الاصطناعي في مكان واحد. اكتشف أحدث الحلول التقنية في مجالات الكتابة، التصميم، الفيديو، البرمجة وغيرها الكثير. كل ما تحتاجه لتعزيز إنتاجيتك وإبداعك.
-                </p>
-                <div class="hero-buttons">
-                    <a href="category.html" class="btn btn-primary">استكشف الأقسام</a>
-                    <a href="about.html" class="btn btn-secondary">تعرف علينا</a>
-                </div>
+            <a href="category.html" class="back-btn">
+                <i class="fas fa-arrow-right"></i>
+                العودة إلى الأقسام الرئيسية
+            </a>
+            
+            <div class="page-header">
+                <h1 id="category-title">عنوان القسم</h1>
+                <p id="category-description">وصف القسم</p>
             </div>
-        </div>
-    </section>
-
-    <!-- قسم الأقسام -->
-    <section class="sections" id="sections">
-        <div class="container">
-            <h2 class="section-title">أقسام الموقع</h2>
-            <div class="cards-grid" id="main-categories">
-                <!-- سيتم ملئها ديناميكياً بواسطة JavaScript -->
+            
+            <div class="subcategories-grid" id="subcategories-container">
+                <!-- سيتم ملئها ديناميكياً -->
             </div>
         </div>
     </section>
@@ -89,7 +82,7 @@
                 <div class="footer-column">
                     <h3>روابط مفيدة</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html" class="active">الرئيسية</a></li>
+                        <li><a href="index.html">الرئيسية</a></li>
                         <li><a href="category.html">جميع الأقسام</a></li>
                         <li><a href="about.html">من نحن</a></li>
                         <li><a href="contact.html">اتصل بنا</a></li>
@@ -116,9 +109,16 @@
     <script src="js/main.js"></script>
     <script src="js/navigation.js"></script>
     <script>
-        // تحميل الأقسام في الصفحة الرئيسية
+        // تحميل الأقسام الفرعية
         document.addEventListener('DOMContentLoaded', function() {
-            loadMainCategories();
+            const categoryId = localStorage.getItem('selectedCategory');
+            if (categoryId) {
+                loadSubcategories(categoryId);
+            } else {
+                // إذا لم يكن هناك قسم محدد، العودة للصفحة الرئيسية
+                window.location.href = 'category.html';
+            }
+            
             setupFooterCategories();
         });
     </script>
