@@ -246,7 +246,7 @@ function displayTools(tools, container) {
             </div>
             <p class="tool-description">${tool.description}</p>
             ${priceHtml}
-            <a href="${tool.url}" target="_blank" class="tool-link">
+            <a href="redirect.html?url=${encodeURIComponent(tool.url)}" target="_blank" class="tool-link">
                 <i class="fas fa-external-link-alt"></i> زيارة الموقع
             </a>
         `;
