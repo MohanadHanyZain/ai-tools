@@ -1,33 +1,32 @@
-// بيانات الأقسام الرئيسية والفرعية
+// بيانات الأقسام الرئيسية والفرعية فقط
 const categoriesData = [
     {
         id: 1,
         name: "النصوص والكتابة",
-        enName: "Writing & Content",
+        enName: "Text & Writing",
         icon: "fas fa-pen-nib",
         color: "#6d28d9",
-        description: "أدوات الذكاء الاصطناعي للمساعدة في كتابة المحتوى، التدقيق اللغوي، الترجمة، وإنشاء النصوص الإبداعية.",
+        description: "أدوات الذكاء الاصطناعي للكتابة بمختلف أنواعها وأغراضها - من التسويق إلى التدقيق اللغوي",
         subcategories: [
-            "كتابة المقالات والمنشورات",
-            "المساعد الدراسي والتلخيص",
-            "التصحيح والتدقيق اللغوي",
-            "إعادة الصياغة والترجمة",
-            "الإعلانات والتسويق (SEO)"
+            "كتابة المحتوى التسويقي (Copywriting)",
+            "تحسين محركات البحث (SEO Tools)",
+            "التلخيص وإعادة الصياغة",
+            "التدقيق اللغوي والترجمة",
+            "الدردشة والبحث (Chatbots)"
         ]
     },
     {
         id: 2,
         name: "الصور والتصميم",
-        enName: "Images & Design",
+        enName: "Image & Design",
         icon: "fas fa-palette",
         color: "#10b981",
-        description: "منصات توليد الصور وتحريرها باستخدام الذكاء الاصطناعي، وإنشاء التصاميم الجرافيكية المذهلة.",
+        description: "توليد وتحرير الصور والتصميمات باستخدام الذكاء الاصطناعي لمختلف الأغراض",
         subcategories: [
-            "صناعة الصور من الخيال",
-            "تحسين وترميم الصور",
-            "حذف وتغيير الخلفيات",
-            "تصميم الشعارات والهويات",
-            "التصميم الداخلي والمعماري"
+            "توليد الصور من النص (Art Generation)",
+            "تحرير الصور وتعديلها",
+            "تصميم واجهات المستخدم (UI/UX)",
+            "تصميم الشعارات والهوية البصرية"
         ]
     },
     {
@@ -36,12 +35,12 @@ const categoriesData = [
         enName: "Video & Animation",
         icon: "fas fa-video",
         color: "#f59e0b",
-        description: "تقنيات الذكاء الاصطناعي لإنشاء وتحرير الفيديو، إنتاج الأنيميشن، وتوليد الأفكار الإبداعية.",
+        description: "تقنيات الذكاء الاصطناعي لإنشاء وتحرير الفيديو والرسوم المتحركة",
         subcategories: [
-            "توليد فيديو من نص",
-            "المتحدث الافتراضي (Avatars)",
-            "المونتاج الذكي والترجمة",
-            "تحسين جودة الفيديو"
+            "تحويل النص إلى فيديو",
+            "المذيع الافتراضي (Avatars)",
+            "تحرير الفيديو الآلي",
+            "تحسين جودة الفيديو وتلوينه"
         ]
     },
     {
@@ -50,39 +49,38 @@ const categoriesData = [
         enName: "Audio & Music",
         icon: "fas fa-music",
         color: "#ef4444",
-        description: "أدوات توليد وتحرير الصوت باستخدام الذكاء الاصطناعي، وإنشاء الموسيقى وتعديل المؤثرات الصوتية.",
+        description: "أدوات توليد وتحرير الصوت والموسيقى باستخدام الذكاء الاصطناعي",
         subcategories: [
-            "تحويل النص إلى صوت",
-            "استنساخ وتغيير الأصوات",
-            "صناعة الموسيقى والألحان",
-            "تنقية وعزل الصوت"
+            "تحويل النص إلى صوت (TTS)",
+            "توليد الموسيقى والأغاني",
+            "إزالة الضجيج وتنقية الصوت",
+            "الاستنساخ الصوتي (Voice Cloning)"
         ]
     },
     {
         id: 5,
-        name: "الأتمتة والذكاء الخارق",
-        enName: "Automation & Agents",
-        icon: "fas fa-cogs",
-        color: "#8b5cf6",
-        description: "روبوتات وأدوات الأتمتة الذكية التي تنفذ المهام المتكررة وتعمل كمساعدين افتراضيين أذكياء.",
+        name: "البرمجة والتقنية",
+        enName: "Coding & Tech",
+        icon: "fas fa-code",
+        color: "#3b82f6",
+        description: "مساعدي الذكاء الاصطناعي للبرمجة، بناء التطبيقات، وتحليل البيانات",
         subcategories: [
-            "المساعد الذكي (AI Agents)",
-            "ربط التطبيقات (Workflow)",
-            "جمع البيانات تلقائياً",
-            "الرد الآلي الذكي"
+            "مساعد البرمجة (Coding Assistants)",
+            "بناء التطبيقات والمواقع (No-Code)",
+            "تحليل البيانات"
         ]
     },
     {
         id: 6,
-        name: "البرمجة والتقنية",
-        enName: "Coding & Dev",
-        icon: "fas fa-code",
-        color: "#3b82f6",
-        description: "مساعدي الذكاء الاصطناعي للبرمجة، توليد الشفرات، تصحيح الأخطاء، وشرح المفاهيم التقنية المعقدة.",
+        name: "الأتمتة والذكاء الخارق",
+        enName: "Automation & Agents",
+        icon: "fas fa-cogs",
+        color: "#8b5cf6",
+        description: "روبوتات وأدوات الأتمتة الذكية التي تعمل كوكلاء افتراضيين أذكياء",
         subcategories: [
-            "كتابة وشرح الكود",
-            "بناء المواقع والتطبيقات",
-            "تحليل البيانات والملفات"
+            "وكلاء الذكاء الاصطناعي (AI Agents)",
+            "ربط التطبيقات",
+            "استخراج البيانات (Scraping)"
         ]
     },
     {
@@ -91,12 +89,12 @@ const categoriesData = [
         enName: "Life & Productivity",
         icon: "fas fa-chart-line",
         color: "#06b6d4",
-        description: "تطبيقات الذكاء الاصطناعي لتعزيز الإنتاجية، إدارة الوقت، التخطيط، وتحسين جودة الحياة اليومية.",
+        description: "تطبيقات الذكاء الاصطناعي لتعزيز الإنتاجية وتحسين جودة الحياة",
         subcategories: [
-            "مساعد الاجتماعات والملاحظات",
-            "البحث العلمي الموثق",
-            "السيرة الذاتية والوظائف",
-            "تعلم اللغات والمهارات"
+            "إدارة الاجتماعات",
+            "تنظيم الوقت والملاحظات",
+            "البحث العلمي والأكاديمي",
+            "البريد الإلكتروني الذكي"
         ]
     },
     {
@@ -105,155 +103,12 @@ const categoriesData = [
         enName: "Prompt Engineering",
         icon: "fas fa-terminal",
         color: "#84cc16",
-        description: "تقنيات وأدوات صياغة الأوامر الفعالة للذكاء الاصطناعي لتحقيق أفضل النتائج من النماذج اللغوية.",
+        description: "تقنيات وأدوات صياغة الأوامر الفعالة للذكاء الاصطناعي",
         subcategories: [
-            "مكتبة الأوامر الجاهزة",
-            "صناعة الأوامر الخاصة"
+            "سوق الأوامر (Prompt Marketplaces)",
+            "أدوات تحسين الأوامر",
+            "مكتبات الأوامر الجاهزة"
         ]
-    }
-];
-
-// بيانات الأدوات (يمكن استبدالها بملف JSON منفصل)
-const toolsData = [
-    {
-        id: 1,
-        name: "ChatGPT",
-        description: "نموذج لغوي متقدم يمكنه كتابة النصوص بجودة عالية، الإجابة على الأسئلة، المساعدة في البرمجة وغيرها.",
-        category: "النصوص والكتابة",
-        subcategory: "كتابة المقالات والمنشورات",
-        url: "https://chat.openai.com",
-        tags: ["مجاني", "مدفوع", "كتابة", "برمجة"],
-        icon: "fas fa-comment-alt"
-    },
-    {
-        id: 2,
-        name: "Jasper AI",
-        description: "أداة متخصصة في كتابة محتوى التسويق، الإعلانات، المدونات والمقالات بشكل احترافي.",
-        category: "النصوص والكتابة",
-        subcategory: "الإعلانات والتسويق (SEO)",
-        url: "https://www.jasper.ai",
-        tags: ["مدفوع", "تسويق", "SEO"],
-        icon: "fas fa-shopping-cart"
-    },
-    {
-        id: 3,
-        name: "Grammarly",
-        description: "أداة ذكية للتدقيق اللغوي والتحسين الأسلوبي للنصوص الإنجليزية.",
-        category: "النصوص والكتابة",
-        subcategory: "التصحيح والتدقيق اللغوي",
-        url: "https://www.grammarly.com",
-        tags: ["مجاني", "مدفوع", "تدقيق", "لغة"],
-        icon: "fas fa-spell-check"
-    },
-    {
-        id: 4,
-        name: "Midjourney",
-        description: "نموذج توليد صور من النصوص بأسلوب فني عالي الجودة ومتنوع.",
-        category: "الصور والتصميم",
-        subcategory: "صناعة الصور من الخيال",
-        url: "https://www.midjourney.com",
-        tags: ["مدفوع", "صور", "فن", "توليد"],
-        icon: "fas fa-paint-brush"
-    },
-    {
-        id: 5,
-        name: "DALL-E",
-        description: "نموذج ذكاء اصطناعي من OpenAI لتوليد الصور من الوصف النصي.",
-        category: "الصور والتصميم",
-        subcategory: "صناعة الصور من الخيال",
-        url: "https://labs.openai.com",
-        tags: ["مدفوع", "صور", "OpenAI"],
-        icon: "fas fa-image"
-    },
-    {
-        id: 6,
-        name: "Remove.bg",
-        description: "أداة ذكية لإزالة خلفيات الصور تلقائياً بدقة عالية.",
-        category: "الصور والتصميم",
-        subcategory: "حذف وتغيير الخلفيات",
-        url: "https://www.remove.bg",
-        tags: ["مجاني", "مدفوع", "خلفيات", "تحرير"],
-        icon: "fas fa-object-ungroup"
-    },
-    {
-        id: 7,
-        name: "Runway ML",
-        description: "منصة متكاملة لإنشاء وتحرير الفيديو باستخدام الذكاء الاصطناعي.",
-        category: "الفيديو والأنيميشن",
-        subcategory: "المونتاج الذكي والترجمة",
-        url: "https://runwayml.com",
-        tags: ["مدفوع", "فيديو", "مونتاج", "أنيميشن"],
-        icon: "fas fa-film"
-    },
-    {
-        id: 8,
-        name: "Synthesia",
-        description: "منصة لإنشاء فيديوهات بمتحدثين افتراضيين من النصوص.",
-        category: "الفيديو والأنيميشن",
-        subcategory: "المتحدث الافتراضي (Avatars)",
-        url: "https://www.synthesia.io",
-        tags: ["مدفوع", "أفاتار", "فيديو", "نص إلى فيديو"],
-        icon: "fas fa-user-tie"
-    },
-    {
-        id: 9,
-        name: "Murf AI",
-        description: "تحويل النص إلى كلام طبيعي بأصوات واقعية ومتنوعة.",
-        category: "الصوت والموسيقى",
-        subcategory: "تحويل النص إلى صوت",
-        url: "https://murf.ai",
-        tags: ["مجاني", "مدفوع", "نص إلى كلام", "أصوات"],
-        icon: "fas fa-microphone-alt"
-    },
-    {
-        id: 10,
-        name: "AIVA",
-        description: "ذكاء اصطناعي لإنشاء موسيقى أصلية لمقاطع الفيديو والألعاب وغيرها.",
-        category: "الصوت والموسيقى",
-        subcategory: "صناعة الموسيقى والألحان",
-        url: "https://www.aiva.ai",
-        tags: ["مجاني", "مدفوع", "موسيقى", "تأليف"],
-        icon: "fas fa-music"
-    },
-    {
-        id: 11,
-        name: "GitHub Copilot",
-        description: "مساعد برمجي ذكي يقترح أكواد كاملة وسطور برمجية أثناء الكتابة.",
-        category: "البرمجة والتقنية",
-        subcategory: "كتابة وشرح الكود",
-        url: "https://github.com/features/copilot",
-        tags: ["مدفوع", "برمجة", "مساعد", "أكواد"],
-        icon: "fas fa-code"
-    },
-    {
-        id: 12,
-        name: "Zapier",
-        description: "منصة أتمتة تربط بين التطبيقات وتنفذ سير العمل تلقائياً.",
-        category: "الأتمتة والذكاء الخارق",
-        subcategory: "ربط التطبيقات (Workflow)",
-        url: "https://zapier.com",
-        tags: ["مجاني", "مدفوع", "أتمتة", "ربط"],
-        icon: "fas fa-random"
-    },
-    {
-        id: 13,
-        name: "Notion AI",
-        description: "مساعد ذكي داخل منصة Notion للمساعدة في الكتابة والتلخيص والتنظيم.",
-        category: "الحياة والإنتاجية",
-        subcategory: "مساعد الاجتماعات والملاحظات",
-        url: "https://www.notion.so/product/ai",
-        tags: ["مدفوع", "إنتاجية", "تنظيم", "ملاحظات"],
-        icon: "fas fa-sticky-note"
-    },
-    {
-        id: 14,
-        name: "PromptBase",
-        description: "سوق لشراء وبيع أوامر الذكاء الاصطناعي الجاهزة والمحسنة.",
-        category: "مهندس الأوامر",
-        subcategory: "مكتبة الأوامر الجاهزة",
-        url: "https://promptbase.com",
-        tags: ["مدفوع", "أوامر", "تسويق", "جاهزة"],
-        icon: "fas fa-terminal"
     }
 ];
 
@@ -262,14 +117,13 @@ function getCategoryById(id) {
     return categoriesData.find(category => category.id == id);
 }
 
-// دالة للبحث عن أدوات بواسطة القسم والقسم الفرعي
-function getToolsByCategoryAndSubcategory(categoryName, subcategoryName) {
-    return toolsData.filter(tool => 
-        tool.category === categoryName && tool.subcategory === subcategoryName
-    );
+// جعل البيانات متاحة عالمياً
+if (typeof window !== 'undefined') {
+    window.categoriesData = categoriesData;
+    window.getCategoryById = getCategoryById;
 }
 
-// دالة للحصول على جميع الأدوات في قسم معين
-function getToolsByCategory(categoryName) {
-    return toolsData.filter(tool => tool.category === categoryName);
+// تصدير البيانات إذا كنا في بيئة تدعم ES6 modules
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { categoriesData, getCategoryById };
 }
