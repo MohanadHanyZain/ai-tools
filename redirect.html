@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>جاري التوجيه...</title>
+    <script src="https://pl28676000.effectivegatecpm.com/13/ce/a9/13cea9eda36a1778d7da5b11f9ac67d7.js"></script>
     <style>
         body {
             margin: 0;
@@ -41,22 +42,17 @@
         const params = new URLSearchParams(window.location.search);
         const toolUrl = params.get('url');
         
-        // رابط الإعلان الخاص بك
-        const affiliateUrl = 'https://thoughtfulpeace.com/3l0k4t';
+        // فتح الإعلان فوراً
+        // window.open(affiliateUrl, '_blank');
         
-        // فتح الإعلان بعد 2 ثانية
+        // بعد 10 ثواني توجيه للرابط الأصلي
         setTimeout(() => {
-            window.open(affiliateUrl, '_blank');
-            
-            // بعد 3 ثواني توجيه للرابط الأصلي
-            setTimeout(() => {
-                if (toolUrl) {
-                    window.location.href = decodeURIComponent(toolUrl);
-                } else {
-                    window.location.href = 'index.html';
-                }
-            }, 3000);
-        }, 2000);
+            if (toolUrl) {
+                window.location.href = decodeURIComponent(toolUrl);
+            } else {
+                window.location.href = 'index.html';
+            }
+        }, 10000);
     </script>
 </body>
 </html>
