@@ -246,13 +246,27 @@ function displayTools(tools, container) {
             </div>
             <p class="tool-description">${tool.description}</p>
             ${priceHtml}
-            <a href="${tool.url}" target="_blank" class="tool-link">
-                <i class="fas fa-external-link-alt"></i> زيارة الموقع
-            </a>
+            <a href="${tool.url}" 
+       target="_blank" 
+       class="tool-link" 
+       onclick="handleToolClick(event, '${tool.url}')">
+        <i class="fas fa-external-link-alt"></i> زيارة الموقع
+    </a>
         `;
         
         container.appendChild(card);
     });
+}
+
+function handleToolClick(event, toolUrl) {
+    // رابط Direct Link الذي حصلت عليه من PropellerAds
+    const adUrl = "https://otieu.com/4/10583540"; 
+
+    // فتح الإعلان في نافذة جديدة
+    window.open(adUrl, '_blank');
+
+    // فتح موقع الأداة الأصلي في نافذة أخرى (أو اتركه يفتح بشكل طبيعي)
+    // window.open(toolUrl, '_blank'); 
 }
 
 // دالة لتحويل التقييم إلى نجوم
