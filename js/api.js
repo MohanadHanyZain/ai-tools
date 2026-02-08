@@ -160,6 +160,8 @@ class DataAPI {
         }
     }
 
+    
+
     // إضافة أداة جديدة (محاكاة - في تطبيق حقيقي سيكون هذا API على الخادم)
     async addTool(newTool) {
         try {
@@ -237,3 +239,4 @@ if (typeof window !== 'undefined') {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { dataAPI, DataAPI };
 }
+
